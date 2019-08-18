@@ -14,11 +14,11 @@ export default class OfflinePackage{
         }
         compilation.assets["config.json"] = {
           source() {
-              return JSON.stringify(config);
+            return JSON.stringify(config);
           },
           size() {
             return 1
-        }
+          }
         }
         resolve()
       })
@@ -27,7 +27,6 @@ export default class OfflinePackage{
       return new Promise((resolve) => {
         const zipName = Date.now()
         shell.cd(this.options.outputPath);
-        debugger
         shell.exec(`zip -r ${zipName} .zip *`)
         resolve()
       })
