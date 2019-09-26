@@ -58,7 +58,6 @@ function () {
         return new Promise(function (resolve) {
           var zipName = Date.now();
           shell.cd(_this.options.outputPath);
-          debugger;
           shell.exec("zip -r ".concat(zipName, " .zip *"));
           resolve();
         });

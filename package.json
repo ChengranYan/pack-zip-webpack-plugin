@@ -5,6 +5,10 @@
   "scripts": {
     "build": "rollup -c rollup.config.js"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "modules": "dist/pack.es.js",
   "main": "dist/pack.commonjs.js",
   "keywords": [],
